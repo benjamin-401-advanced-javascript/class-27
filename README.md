@@ -6,12 +6,13 @@
 
 ### Links and Resources
 * [submission PR](https://github.com/benjamin-401-advanced-javascript/class-05/pull/2)
-* [travis](https://www.travis-ci.com/benjamin-401-advanced-javascript/class-05)
-* [front-end](https://cf-401-class-05.herokuapp.com/)
+* [travis](https://www.travis-ci.com/benjamin-401-advanced-javascript/class-05)s
+* [front-end-amplify](https://master.d3asahgk3yof0s.amplifyapp.com)
+* [front-end-E3](http://class-27.s3-website-us-west-2.amazonaws.com/)
 
 #### Documentation
 * [api docs](http://xyz.com) (API servers)
-* [jsdoc](http://xyz.com) (Server assignments)
+* [documentation](http://localhost:6060/) (Server assignments)
 * [styleguide](http://xyz.com) (React assignments)
 
 ### Modules

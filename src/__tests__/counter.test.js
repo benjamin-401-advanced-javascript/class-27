@@ -1,20 +1,28 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Counter from '../components/counter/counter.js';
+import Counter from '../components/counter/counter';
 
 describe('<Thing/>', () => {
   it('is alive at application start', () => {
-    let app = shallow(<Counter />);
-    expect(app.find('.down clicker').exists()).toBeTruthy();
-    expect(app.find('.up clicker').exists()).toBeTruthy();
+    const app = shallow(<Counter />);
+    expect(app.find('button').exists()).toBeTruthy();
+    expect(app.find('span').exists()).toBeTruthy();
   });
 
-  it('changes state on click', () => {
-    let app = mount(<Counter />);
-    let button = app.find('button');
+  it('changes state on up click', () => {
+    const app = mount(<Counter />);
+    const button = app.find('.up-clicker');
     button.simulate('click');
-    expect(app.state('stuff')).toBe(false);
-    expect(app.find('span').text()).toContain('false');
+    expect(app.state('count')).toBe(1);
+    expect(app.find('span').text()).toContain('1');
+  });
+
+  it('changes state on down click', () => {
+    const app = mount(<Counter />);
+    const button = app.find('.down-clicker');
+    button.simulate('click');
+    expect(app.state('count')).toBe(-1);
+    expect(app.find('span').text()).toContain('-1');
   });
 
   it('renders correctly', () => {

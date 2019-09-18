@@ -3,12 +3,17 @@
   "env": {
     "browser": true
   },
+  "globals": {
+    "shallow": true,
+    "render": true,
+    "mount": true
+  },
   "parser": "babel-eslint",
   "plugins": ["jest","react"],
   "rules": {
     "arrow-body-style": "off",
     "class-methods-use-this": "off",
-    "global-require": "off",
+    "global-require": 1,
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
     "linebreak-style": "off",
     "no-multi-assign": "off",
